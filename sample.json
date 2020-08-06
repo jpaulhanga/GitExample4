@@ -1,0 +1,18 @@
+{
+	"people":[
+		{
+			"Id" : "1",
+			"fName": "Pau",
+			"lName":"John",
+			"Email": "paul.john@netlab.com"
+		},
+
+		{
+			"Id":"2",
+			"fName":"Nicholas",
+			"lName":"Muriuki",
+			"Email":"Nicholas.Muriuki@netlab.com"
+		}
+	]
+
+}
