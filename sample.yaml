@@ -1,0 +1,15 @@
+---
+people:
+- id: 1
+  fname: paul
+  lname: john
+  email: p.john@netlab.com
+- id: 2
+  fname: pius
+  lname: kegocha
+  email: p.kegocha@netlab.com
+- id: 3
+  fnmae: irene
+  lname: boke
+  email: i.boke@netlab.com
+...
