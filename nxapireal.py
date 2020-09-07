@@ -42,7 +42,16 @@ counter = 0
 nei_count = response['ins_api']['outputs']['output']['body']['neigh_count']
 
 while counter < nei_count:
-	remote_hostname = response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['device_id']
-	local_interface=response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['intf_id']
-	remote_interface=response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['port_id']
+	hostname = response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['device_id']
+	local_int=response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['intf_id']
+	remote_int=response['ins_api']['outputs']['output']['body']['TABLE_cdp_neighbor_brief_info']['ROW_cdp_neighbor_brief_info'][counter]['port_id']
 
+	body = {
+		"l1phyif": {
+			"attributes": {
+				"descr": connected to +'hostname'+ remote if is +'remote_int'
+			}
+		}
+	}
+
+	counter += 1
